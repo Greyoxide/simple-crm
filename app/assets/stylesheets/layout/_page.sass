@@ -1,0 +1,27 @@
+*
+  color: $type
+
+a
+  color: $primary
+
+html
+  background-color: $page
+  min-height: 100%
+
+body
+  min-height: 100vh
+  display: flex
+  margin: 0
+
+  main
+    padding: 1rem
+    padding-left: 2rem
+    flex-grow: 1
+
+    & > section
+      margin-top: 1rem
+      &:first-of-type
+        margin-top: 0
+
+    * + *
+      margin-bottom: 2rem

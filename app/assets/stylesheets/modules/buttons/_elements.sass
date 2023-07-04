@@ -1,0 +1,13 @@
+$sizes: (small 12px, medium 16px, large 20px)
+$default-color: map-get($themes, primary) // getting primary color
+
+// Loop for sizes with default color
+@each $size, $fontSize in $sizes
+  a.#{$size}, input[type=submit].#{$size}
+    @include button($fontSize, $default-color)
+
+// Nested loop for color themes and sizes
+@each $theme, $color in $themes
+  @each $size, $fontSize in $sizes
+    a.#{$theme}.#{$size}, input[type=submit].#{$theme}.#{$size}
+      @include button($fontSize, $color)

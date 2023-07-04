@@ -1,0 +1,14 @@
+h1 = link_to @company.name, [:edit, @company]
+
+section
+  h3 People
+  ul
+    = render @people
+
+
+
+section
+  h3 Proposals
+  = link_to "New Proposal", [:new, @company, :proposal]
+  ul
+    = render @proposals

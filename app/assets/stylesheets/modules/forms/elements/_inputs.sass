@@ -1,0 +1,36 @@
+input:not([type='submit'])
+  // overriding defaults
+  outline: 0
+  background-color: transparent
+
+  // main settings
+  padding: .5rem 1rem
+  border: 1px solid shade( $page, 10% )
+  font-size: .875rem
+  border-radius: .3rem
+  //margin-bottom: .5rem
+  display: block
+  width: 100%
+  &:focus
+    border-color: $primary
+    
+  &[type='file']
+    padding: .25rem
+    border: 0
+    &::file-selector-button
+      content: 'hello'
+      background-color: $type
+      font-size: .875rem
+      outline: inherit
+      border: 0
+      border-radius: inherit
+      padding: .5rem 1rem
+      color: $page
+
+
+
+.field_with_errors
+  input
+    color: $danger
+    border-color: $danger
+    background-color: transparentize(tint($danger, 20), .6)

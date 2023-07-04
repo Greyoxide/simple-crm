@@ -1,0 +1,9 @@
+header.centered.flex.spaced.out
+  h1 Companies
+  .buttons
+    = link_to "Create new company", new_company_path, class: 'medium primary', data: { turbo_frame: 'modal' }
+
+section.standout
+  .body
+    ul
+      = render @companies

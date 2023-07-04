@@ -1,0 +1,28 @@
+.color-selector
+  width: 32px
+  height: 32px
+  overflow: hidden
+  position: relative
+  border-radius: 50px
+  border: 1px solid shade( $page, 10% )
+  margin-right: .5rem
+  input[type=color]
+    position: absolute
+    top: -10px
+    left: -10px
+    width: 50px
+    height: 50px
+    padding: 0
+    outline: 0
+    border: 0
+
+
+.color-field
+  // this class assumes a color field followed by a text-field
+  display: flex
+  & > input
+    width: auto
+    justify-self: stretch
+    flex: 1
+    
+  

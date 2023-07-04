@@ -1,0 +1,21 @@
+&
+  background-color: $page
+  position: fixed
+  max-width: 100ch
+  margin: auto
+  border: 0
+  border-radius: .5rem
+  width: 40rem
+  scrollbar-width: none
+  &::-webkit-scrollbar
+    display: none
+    
+  &::backdrop
+    background: $primary
+    opacity: .5
+    backdrop-filter: blur(3px)
+    
+      
+  @include phone
+    width: 95vw
+    // height: 95vh

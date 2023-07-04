@@ -1,0 +1,12 @@
+aside#navigation
+  b SimpleCRM
+  nav
+    ul
+      li
+        = active_link_to companies_path do
+          = tabler_icon :grid_dots
+          span Companies
+      li
+        = active_link_to [:people] do
+          = tabler_icon :users
+          span People

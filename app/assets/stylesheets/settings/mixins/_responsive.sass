@@ -1,0 +1,34 @@
+// Media Queries
+$tablet-width:  768px
+$laptop-width:  1024px
+$desktop-width: 1920px
+$ultra-width:   3840px
+
+@mixin phone
+  @media (max-width: #{$tablet-width - 1px})
+    @content
+
+@mixin tablet
+  @media (min-width: #{$tablet-width}) and (max-width: #{$laptop-width - 1px})
+    @content
+
+@mixin laptop
+  @media (min-width: #{$laptop-width}) and (max-width: #{$desktop-width - 1px})
+    @content
+    
+@mixin desktop
+  @media (min-width: #{$desktop-width}) and (max-width: #{$ultra-width - 1px})
+    @content
+    
+@mixin ultra
+  @media (min-width: #{$ultra-width})
+    @content
+
+@mixin dark-mode
+  @media (prefers-color-scheme: dark)
+    @content
+
+@mixin light-mode
+  @media (prefers-color-scheme: light)
+    @content
+    

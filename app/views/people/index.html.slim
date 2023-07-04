@@ -1,0 +1,9 @@
+header.centered.flex.spaced.out
+  h1 People
+  .buttons
+    = link_to "Create new person", new_company_path, class: 'medium primary'
+
+section.standout
+  .body
+    ul
+      = render @people

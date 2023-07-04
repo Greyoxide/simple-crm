@@ -1,0 +1,32 @@
+fieldset
+  border: 1px solid shade( $page, 10% )
+  border-radius: .25rem
+  padding: .5rem 1rem
+  width: 100%
+  margin-top: 1rem
+  legend
+    padding: .5rem
+
+.tab-container
+  margin-bottom: .5rem
+
+.annotated
+  position: relative
+
+  &:before
+    content: '$'
+    position: absolute
+    top: .6rem
+    left: .5rem
+    color: $medium-dark-grey
+    z-index: 1
+
+  input[type=number]
+    padding-left: 1.5rem
+  
+  &.currency
+    &:before
+      content: '$'
+  &.percentage
+    &:before
+      content: '%'

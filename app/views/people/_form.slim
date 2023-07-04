@@ -1,0 +1,14 @@
+= form_with model: @person, path: @person, local: true do |p|
+
+  = errors(@person)
+
+  = p.text_field :first_name
+  = p.label :first_name
+
+  = p.text_field :last_name
+  = p.label :last_name
+
+  = p.email_field :email
+  = p.label :email
+
+  = p.submit

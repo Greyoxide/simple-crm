@@ -1,0 +1,44 @@
+&.aligned
+  & > *
+    display: flex
+  &.middle
+    & > *
+      align-items: center
+
+&>.full
+  grid-column: span 12
+
+&>.third
+    grid-column: span 4
+    @include phone
+      grid-column: span 12
+    @include tablet
+      grid-column: span 3
+
+&>.two-thirds
+  grid-column: span 8
+  @include tablet
+    grid-column: span 12
+  @include phone
+    grid-column: span 12
+
+&>.half
+    grid-column: span 6
+    @include phone
+      grid-column: span 12
+    @include tablet
+      grid-column: span 6
+
+&>.three-qtr
+    grid-column: span 9
+    @include phone
+      grid-column: span 12
+    @include tablet
+      grid-column: span 6
+
+&>.qtr
+    grid-column: span 3
+    @include phone
+      grid-column: span 12
+    @include tablet
+      grid-column: span 6

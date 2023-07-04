@@ -1,0 +1,20 @@
+= form_with model: @company, path: [@company], data: { action: 'turbo:submit-end->modal#close' } do |c|
+  header
+    h1 = @company.persisted? ? "Edit #{@company.name}" : 'New company'
+  .body
+    div
+      = c.text_field :name
+      = c.label :name
+
+    h3 People
+  
+    .checkboxes
+      = c.collection_check_boxes :person_ids, Person.all, :id, :full_name do |b|
+        .checkbox
+          = b.check_box
+          = b.label
+
+  .footer
+    .left.buttons
+      = c.submit class: 'small primary'
+      = modal_closer

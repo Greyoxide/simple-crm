@@ -1,0 +1,15 @@
+//.toggle
+//  display: none
+//  &.is-active
+//    display: block
+
+.toggle
+  display: none
+  @include phone
+    display: block
+    color: $secondary
+    font-size: .875rem
+    padding: 1rem
+    svg
+      *
+        stroke: $page

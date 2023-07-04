@@ -1,0 +1,32 @@
+=clear
+  outline: none
+  border: none
+  background-color: transparent
+
+
+=button($font-size, $background-color)
+  +clear
+  // Calculate vertical padding based on font size
+  $padding-vertical: $font-size * .75
+
+  // Calculate horizontal padding based on font size
+  $padding-horizontal: $font-size * 1.5
+
+  // Determine text color based on background color
+  $text-color: if(lightness($background-color) > 70, darken($background-color, 30%), #fff)
+
+  // Button styles
+  padding-top: $padding-vertical
+  padding-bottom: $padding-vertical
+  padding-left: $padding-horizontal
+  padding-right: $padding-horizontal
+  font-size: $font-size
+  background-color: $background-color
+  color: $text-color
+  border-radius: 4px
+  text-decoration: none
+  transition: .5s
+
+  &:hover
+    background-color: darken($background-color, 10%)
+    color: white

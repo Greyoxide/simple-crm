@@ -1,0 +1,25 @@
+// basic flex
+&
+  display: flex
+
+  &.wrapped
+    flex-wrap: wrap
+
+  &.column
+    flex-direction: column
+
+  &.aligned
+    &.center
+      justify-content: center
+    &.right
+      justify-content: right
+    &.middle
+      align-items: center
+    &.bottom
+      align-items: flex-end
+
+  &.spaced
+    &.out
+      justify-content: space-between
+    &.evenly
+      justify-content: space-evenly
