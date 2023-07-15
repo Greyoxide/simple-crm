@@ -1,4 +1,4 @@
-aside#navigation
+aside#navigation.vertical
   b SimpleCRM
   nav
     ul
@@ -10,3 +10,9 @@ aside#navigation
         = active_link_to [:people] do
           = tabler_icon :users
           span People
+          
+    ul
+      li
+        = active_link_to settings_path do
+          = tabler_icon :settings_2
+          span Settings

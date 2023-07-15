@@ -31,6 +31,14 @@ module SimpleCrm
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
 
+    config.eager_load_paths << Rails.root.join('lib')
+
+    console do
+      require 'resources/console'
+      Rails::ConsoleMethods.send :include, Org::Console
+      TOPLEVEL_BINDING.eval('self').extend Org::Console # PRY
+    end
+
     # Don't generate system test files.
     config.generators.system_tests = nil
   end

@@ -4,6 +4,11 @@ section
       display: flex
       justify-content: space-between
     .body
+      border: 1px solid darken($standout, 5%)
+      filter: drop-shadow(.25rem .25rem .25rem $light-grey)
       background-color: $standout
       border-radius: .5rem
-      padding: 1rem
+      padding: 2rem
+
+  &.medium
+    max-width: $page-width/66.666

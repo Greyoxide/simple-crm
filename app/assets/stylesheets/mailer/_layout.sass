@@ -1,0 +1,33 @@
+
+html
+  body
+    background-color: $page
+    table
+      border-collapse: separate
+      mso-table-lspace: 0
+      mso-table-rspace: 0
+      width: 100%
+      tbody
+        tr
+          td
+            &.whitespace
+              font-family: sans-serif
+              font-size: 16px
+              vertical-align: top
+              
+            &.body
+              vertical-align: top
+              display: block
+              max-width: 580px
+              padding: 10px
+              padding-bottom: 40px
+              width: 580px
+              margin: 0 auto !important
+              .header
+                margin: 32px auto
+              .main
+                padding: 32px
+                border-radius: 4px
+                background-color: lighten($page, 5%)
+                margin-top: 16px
+                border: 2px solid shade($page, 2%)

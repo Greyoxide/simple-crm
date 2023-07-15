@@ -10,9 +10,10 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
-  <body>
+  <body id='dashboard'>
     <%= render 'navigation' %>
     <main id='body'><%= yield %></main>
     <%= turbo_frame_tag :modal %>
+
   </body>
 </html>

@@ -1,10 +1,17 @@
 Rails.application.routes.draw do
-  resources :companies do
-    resources :proposals, only: [:new, :create]
-  end
+  resources :companies
   resources :people
 
-  resources :proposals, except: [:new, :create]
+  resources :sessions
+  resources :signups, only: %i[new create]
+  resources :password_reset_requests, only: %i[new create]
+  resources :password_resets, only: %i[new create]
 
-  root to: "companies#index"
+  get :settings, to: 'pages#settings'
+
+  root to: "public/pages#index"
+
+  draw :public
+
+  mount GoodJob::Engine => 'good_job'
 end

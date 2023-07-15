@@ -1,2 +1,7 @@
-li
-  = link_to person.full_name, person
+= row class: 'person', id: dom_id(person) do
+  = field body: person.full_name, label: 'Name'
+  = field body: person.companies.count, label: 'memberships'
+  = field class: 'options', label: 'Options' do
+    = link_to person do
+      = tabler_icon :eye
+      span View

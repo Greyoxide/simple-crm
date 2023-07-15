@@ -1,9 +1,10 @@
 header.centered.flex.spaced.out
   h1 People
   .buttons
-    = link_to "Create new person", new_company_path, class: 'medium primary'
+    = link_to "Create new person", [:new, :person], class: 'medium primary', data: { turbo_frame: 'modal' }
 
 section.standout
   .body
-    ul
-      = render @people
+    = table do
+      = turbo_frame_tag :table do
+        = render @people

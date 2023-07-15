@@ -1,0 +1,9 @@
+p = "Hi #{@invitation.email}"
+
+p You have been invited to set up a user account on SimpleCRM.
+
+p To setup your account, click on the link below, and enter a password.
+
+= link_to "Click Here to complete your signup", [:new, :public, :signup, invite: @invitation.key]
+
+p For security purposes, this link will only work for one day.

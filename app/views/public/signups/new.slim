@@ -1,0 +1,26 @@
+.centered.half-width.component
+  section.standout
+    header
+      h1 Sign Up
+    = form_with model: @signup, url: [:public, @signup, invite: @invitation.key], class: 'body', data: { turbo: false } do |f|
+  
+      = errors @signup
+      
+      section
+        .grid
+          .half
+            = f.text_field :first_name, placeholder: 'First'
+          .half
+            = f.text_field :last_name, placeholder: 'Last'
+          .full
+            = f.email_field :email, placeholder: 'email', value: @invitation.email
+          .full
+            = select_field f, :time_zone, ActiveSupport::TimeZone.all.sort
+            / = time_zone_select f, :time_zone, ActiveSupport::TimeZone.all.sort, model: ActiveSupport::TimeZone
+          .full
+            = f.password_field :password, placeholder: 'Password'
+          .full
+            = f.password_field :password_confirmation, placeholder: 'Password confirmation'
+      
+      .buttons
+        = f.submit 'Submit', class: 'medium primary'

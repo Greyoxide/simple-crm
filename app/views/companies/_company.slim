@@ -1,1 +1,7 @@
-li = link_to company.name, company
+= row class: 'company', id: dom_id(company) do
+  = field body: company.name, label: 'Name'
+  = field body: company.people.count, label: 'reps'
+  = field class: 'options', label: 'Options' do
+    = link_to company do
+      = tabler_icon :eye
+      span View

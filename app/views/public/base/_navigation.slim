@@ -1,0 +1,7 @@
+= content_tag :div, id: 'navigation', class: 'horizontal' do
+  b SimpleCRM
+
+  nav
+    ul
+      li = link_to 'Home', [:public, :root]
+      li = Current.user ? link_to('Dashboard', [:companies]) : link_to('Signin', [:new, :public, :session])

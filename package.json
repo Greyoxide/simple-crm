@@ -11,6 +11,7 @@
   },
   "scripts": {
     "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --public-path=/assets",
-    "build:css": "sass ./app/assets/stylesheets/application.sass:./app/assets/builds/application.css --no-source-map --load-path=node_modules"
+    "build:css": "sass ./app/assets/stylesheets/application.sass:./app/assets/builds/application.css --no-source-map --load-path=node_modules",
+    "build:mailer_css": "sass ./app/assets/stylesheets/mailer.sass:./app/assets/builds/mailer.css --no-source-map"
   }
 }

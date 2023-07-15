@@ -1,0 +1,23 @@
+.centered.third-width.component
+  section.standout
+    header
+      h1 Sign in
+    = form_tag [:public, :sessions], class: 'body', data: { turbo: false } do |f|
+      
+      - if @auth_issues.present?
+        ul.errors
+          - @auth_issues.each do |issue|
+            li = issue
+  
+      = email_field_tag :email, nil
+      = label_tag :email
+      
+      = password_field_tag :password, nil
+      = label_tag :password
+      
+      
+      .detail
+        = link_to 'Forgot password', [:new, :public, :password_reset_request]
+        
+      .buttons
+        = submit_tag 'Sign in', class: %w(medium primary)

@@ -37,7 +37,7 @@ gem "redis", "~> 4.0"
 # gem "kredis"
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
-# gem "bcrypt", "~> 3.1.7"
+gem "bcrypt", "~> 3.1.7"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
@@ -73,4 +73,12 @@ gem "sassc", "~> 2.4"
 
 gem "foreman", "~> 0.87.2"
 
-gem 'tabler_icons', git: 'https://github.com/Greyoxide/tabler_icons.git'
+gem 'tabler_icons'
+
+gem 'easy_tabs', git: 'https://github.com/Greyoxide/easy_tabs.git'
+
+# email
+gem 'email_validator'
+gem 'premailer-rails'
+gem "good_job", "~> 3.15"
+gem "annotate", "~> 3.2"

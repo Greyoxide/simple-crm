@@ -1,0 +1,15 @@
+.row
+  display: flex
+  margin-bottom: 0
+  padding: .5rem 0
+  align-items: center
+  & > *
+    flex: 1
+    &:last-child
+      text-align: right
+
+  &.header
+    border-bottom: 2px solid $light-grey
+    *
+      text-transform: uppercase
+      color: $medium-dark-grey

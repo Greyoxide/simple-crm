@@ -1,0 +1,10 @@
+section.medium.wrapper.vertical
+  = form_with url: [:public, :password_reset_requests], data: { turbo: false } do |f|
+  
+    header
+      h1 Reset password
+  
+    = f.email_field :email, placeholder: 'Email'
+    
+    .buttons
+      = f.submit 'Submit'

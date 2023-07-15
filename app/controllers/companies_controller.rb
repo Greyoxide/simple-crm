@@ -1,4 +1,4 @@
-class CompaniesController < ApplicationController
+class CompaniesController < AppController
   def index
     @companies = Company.all
   end
@@ -6,7 +6,6 @@ class CompaniesController < ApplicationController
   def show
     @company = Company.find(params[:id])
     @people = @company.people
-    @proposals = @company.proposals
   end
 
   def new
@@ -18,7 +17,9 @@ class CompaniesController < ApplicationController
     @company = Company.new(company_params)
 
     if @company.save
-      redirect_to @company
+      render turbo_stream: [
+        turbo_stream.prepend(:list, partial: 'companies/company', locals: { company: @company })
+      ]
     else
       render :new
     end
